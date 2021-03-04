@@ -3,6 +3,7 @@ const connect = require('../config/bd');
 const selectWeather = async()=> {
     const cityWeather = await connect();
     const res = await cityWeather.query('SELECT * FROM cityWeather');
+    cityWeather.release();
     return res.rows;
 }
 
@@ -17,12 +18,14 @@ const insertWeather= async(city)=>{
 const topFive = async()=>{
     const cityWeather = await connect();
     const res = await cityWeather.query('SELECT name, COUNT(*) AS Was_checked FROM cityWeather GROUP BY name ORDER BY Was_checked DESC LIMIT 5');
+    cityWeather.release();
     return res.rows;
 }
 
 const lastSearch = async()=>{
     const cityWeather = await connect();
     const res = await cityWeather.query('SELECT name AS Last_searched_cities FROM cityWeather ORDER BY id DESC LIMIT 5');
+    cityWeather.release();
     return res.rows;
 }
 
