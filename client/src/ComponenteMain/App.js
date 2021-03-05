@@ -91,6 +91,7 @@ class App extends React.Component {
            last_search: lastSearched,
          });
    }
+
    
   render() {
     return (
