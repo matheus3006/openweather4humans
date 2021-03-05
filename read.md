@@ -27,29 +27,43 @@ __[Front-end](http://localhost:3000): http://localhost:3000/__
 ---
 __Back-end__:
     :*[Get](http://localhost:5000/api/v1/weather/city/:city)*:__http://localhost:5000/api/v1/weather/city/:city__ Retorna os dados buscados da cidade escolhida;
-    :*[Get](http://localhost:5000/api/v1/weather/most_searched)*:__http://localhost:5000/api/v1/weather/most_searched__ Retorna os dados que mais foram pesquisados e quantas vezes foram;
+---
+    :*[Get](http://localhost:5000/api/v1/weather/most_searched)*:__http://localhost:5000/api/v1/weather/most_searched__ Retorna os dados que mais foram pesquisados e quantas vezes;
+---
     :*[Get](http://localhost:5000/api/v1/weather/last_searched)*:__http://localhost:5000/api/v1/weather/last_searched__ Retorna as ultimas cidades pesquisadas (**Não repete valores**);
-    :*[Get](http://localhost:5000/api/v1/weather)*:__http://localhost:5000/api/v1/weather__ Retorna todos os dados salvos no banco de dados e total de dados salvos(**Rota não utilizada no frontend**);
+---
+    :*[Get](http://localhost:5000/api/v1/weather)*:__http://localhost:5000/api/v1/weather__ Retorna todos os dados salvos no banco de dados e 
+    total de dados salvos(**Rota não utilizada no frontend**);
+---
+---
+
 ---
 ### **Instruções para executar o projeto:** 
 
 **1) Clone o projeto em uma pasta:**
-Basta utilizar  `git clone https://github.com/matheus3006/openweather4humans.git` em seu terminal:
+Basta utilizar em seu terminal:
+`git clone https://github.com/matheus3006/openweather4humans.git`
 ---
 **2) Baixe as dependências para poder rodar o projeto:**
-Foi criado o diretório `openweather4humans/`, após a clonagem.  
+Foi criado o diretório `openweather4humans/`, após a clonagem.
+
+---  
 Entre então no novo diretório para instalar as dependências:
----
-Comandos no Terminal:
+*Comandos no Terminal*:
 ---
  Digite: `cd openweather4humans/`
  Utilize npm ou yarn para instalar as depencias do backend: ` npm install `
- Agora adicione as depencias do front-end: 
-    Primeiro entre no diretorio : ` cd client/`
-    Utilize: `npm install`, após instalar as depencias utilize: `cd ..`, para voltar ao diretório anterior
-    Para finalizar: `npm run dev`
 ---
- 
+ Agora adicione as depencias do front-end: 
+    -Primeiro entre no diretorio : ` cd client/`
+    -Utilize: `npm install`, 
+    -Após instalar as depencias utilize: `cd ..`, para voltar ao diretório anterior
+    -Para finalizar: `npm run dev`
+
+***Ambos Back-end e Front-end estarão inicializados***
+---
+ `Para atualizar ou mostrar os valore em Cidades mais Pesquisadas E Ultimas cidades pesquisas basta clicar no icone de atualização`
+---
 
 ::: 
 *(c) Código e documentação*: **Matheus de Souza**
