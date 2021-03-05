@@ -42,26 +42,25 @@ __Back-end__:
 **1) Clone o projeto em uma pasta:**
 Basta utilizar em seu terminal:
 `git clone https://github.com/matheus3006/openweather4humans.git`
----
+
 **2) Baixe as dependências para poder rodar o projeto:**
 Foi criado o diretório `openweather4humans/`, após a clonagem.
 
 ---  
-Entre então no novo diretório para instalar as dependências:
+Entre então no novo diretório:
 *Comandos no Terminal*:
----
  Digite: `cd openweather4humans/`
- Utilize npm ou yarn para instalar as depencias do backend: ` npm install `
----
+ Utilize npm ou yarn para instalar as depencias do backend: ` npm install `  
+ 
  Agora adicione as depencias do front-end: 
-    -Primeiro entre no diretorio : ` cd client/`
-    -Utilize: `npm install`, 
-    -Após instalar as depencias utilize: `cd ..`, para voltar ao diretório anterior
-    -Para finalizar: `npm run dev`
+    -Primeiro entre no diretorio : ` cd client/`  
+    -Utilize: `npm install`,   
+    -Após instalar as depencias utilize: `cd ..`, para voltar ao diretório anterior  
+    -Para finalizar: `npm run dev`  
 
 ***Ambos Back-end e Front-end estarão inicializados***
 ---
- `Para atualizar ou mostrar os valore em Cidades mais Pesquisadas E Ultimas cidades pesquisas basta clicar no icone de atualização`
+ `Para atualizar ou mostrar os valore em Cidades mais Pesquisadas E Ultimas cidades pesquisas basta clicar no icone de atualização`  
 ---
 
 ::: 
