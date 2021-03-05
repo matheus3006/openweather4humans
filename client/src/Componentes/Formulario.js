@@ -7,7 +7,7 @@ const Formulario = props => {
                 <input type="text" name="city" placeholder="Digite uma cidade"></input>
             </div>
            
-            <button onSubmit> Obter informações climáticas</button>
+            <button> Obter informações climáticas</button>
         </form>
     );
 }
