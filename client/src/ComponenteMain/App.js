@@ -30,6 +30,7 @@ class App extends React.Component {
         const api_req = await axios.get(
           `http://localhost:5000/api/v1/weather/city/${city}`
         );
+        
         const data = api_req.data.data;
 
         //Validação de city
@@ -55,6 +56,15 @@ class App extends React.Component {
       }
     } catch (err) {
       console.error(err);
+      this.setState({
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        weather: undefined,
+        description: undefined,
+        error: "Por favor, Digite o nome correto da cidade",
+      });
     }
   };
 
