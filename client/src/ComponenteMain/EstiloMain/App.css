@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
-.alert-dark{
+.alert-dark {
   background-color: rgb(70, 59, 59);
 }
 
@@ -10,13 +10,14 @@ body {
   font-family: "Open Sans", serif;
 }
 
-h3{
+h3 {
   font-size: 16px;
   font-weight: 800;
   color: #4365d8;
   background: #f3efef;
 }
-p{}
+
+p {}
 
 .wrapper {
   background: linear-gradient(to right, #1b1a1a, #fdfdfd);
@@ -28,15 +29,16 @@ p{}
 
 
 .form-container {
-  background-color: #c4cbd4; 
+  background-color: #c4cbd4;
   padding-left: 70px;
   left: -50px;
   height: 110vh;
 }
+
 .main {
   height: 110vh;
   background: rgb(255, 255, 255);
-  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
   width: 110vh;
   margin: 0 auto;
 }
@@ -53,14 +55,17 @@ p{}
   align-items: center;
   justify-content: center;
   margin: 20px;
-  
+
 }
 
-.cities-container{
+.cities-container {
   background-color: #34343505;
 
 }
 
+.att {
+  cursor: pointer;
+}
 
 
 .subtitle {
@@ -90,14 +95,14 @@ input[type="text"] {
   font-size: 23px;
 }
 
-input[type="text"] { 
-    outline: none;
+input[type="text"] {
+  outline: none;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #c4cbd4 inset;
-    -webkit-text-fill-color: rgb(0, 0, 0) !important;
-    font-weight: 800;
+  -webkit-box-shadow: 0 0 0 30px #c4cbd4 inset;
+  -webkit-text-fill-color: rgb(0, 0, 0) !important;
+  font-weight: 800;
 }
 
 button {
@@ -113,7 +118,7 @@ button {
   color: rgb(19, 14, 14);
   border-style: solid;
   font-weight: 800;
-  
+
 }
 
 button:active {

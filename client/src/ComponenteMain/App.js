@@ -7,6 +7,7 @@ import Listagens from "../Componentes/Listagens";
 import Formulario from "../Componentes/Formulario";
 import ClimaInfo from "../Componentes/ClimaInfo";
 
+
 class App extends React.Component {
   //Pegando as alterações nos dados de busca por busca, armazenamento em estados(states), inicialmente "undefined"
   state = {
@@ -68,24 +69,29 @@ class App extends React.Component {
     }
   };
 
-  async componentDidMount() {
-    const mostSearched_resp = await axios.get(
+
+   mostSearched = async(e)=>{
+    e.preventDefault()
+      const mostSearched_resp = await axios.get(
       `http://localhost:5000/api/v1/weather/most_searched`
     );
     const mostSearched = mostSearched_resp.data.data;
     this.setState({
       most_search: mostSearched,
     });
-
-    const lastSearched_resp = await axios.get(
-      `http://localhost:5000/api/v1/weather/last_results`
-    );
-    const lastSearched = lastSearched_resp.data.data;
-
-    this.setState({
-      last_search: lastSearched,
-    });
   }
+  lastSearched = async(e)=>{
+   e.preventDefault()
+    const lastSearched_resp = await axios.get(
+          `http://localhost:5000/api/v1/weather/last_results`
+        );
+        const lastSearched = lastSearched_resp.data.data;
+    
+        this.setState({
+          last_search: lastSearched,
+        });
+  }
+
 
   render() {
     return (
@@ -107,10 +113,14 @@ class App extends React.Component {
                   />
                 </div>
                 <div className="col-6 title-container">
+                  
                   <Listagens
-                    mostSearched={this.state.most_search}
-                    lastSearched={this.state.last_search}
+                    mostSearched={this.mostSearched}
+                    lastSearched={this.lastSearched}
+                    most_search={this.state.most_search}
+                    last_search={this.state.last_search}
                   />
+                  
                 </div>
               </div>
             </div>
