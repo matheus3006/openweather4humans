@@ -3,6 +3,10 @@ const asyncHandler = require('../middleware/async');
 const weather = require("openweather-apis")
 const {insertWeather,topFive,lastSearch,selectWeather} = require('../models/Weather');
 
+
+// @desc      Get weather data from given city
+// @route     GET /api/v1/weather/city/:city
+// @access    Public 
 exports.getWeather = asyncHandler(async(req,res,next)=>{
     weather.setLang('pt_br');
     weather.setAPPID(process.env.API_KEY);
@@ -23,7 +27,7 @@ exports.getWeather = asyncHandler(async(req,res,next)=>{
                     country: weatherData.sys.country,
                     name:weatherData.name
                 };
-                console.log('Valor de Data',data)
+                
                 if(data !== null){                   
              
                 // Salva os dados 
@@ -48,6 +52,10 @@ exports.getWeather = asyncHandler(async(req,res,next)=>{
     
 });
 
+
+// @desc      Get The most five cities searched
+// @route     GET /api/v1/weather/most_searched
+// @access    Public 
 exports.getTopFive= asyncHandler(async(req,res,next)=>{
     const fiveMostSearched = await topFive();
     
@@ -55,19 +63,23 @@ exports.getTopFive= asyncHandler(async(req,res,next)=>{
 
 });
 
+
+
+// @desc      Get The last five cities searched
+// @route     GET /api/v1/weather/last_searched
+// @access    Public 
 exports.getLastSearched = asyncHandler(async(req,res,next)=>{
     const fiveLastSearch = await lastSearch();
-    
-
     res.status(200).json({success: true, data: fiveLastSearch})
 });
 
+// @desc      Get all cities searched
+// @route     GET /api/v1/weather
+// @access    Public
 exports.getData = asyncHandler(asyncHandler(async(req,res,next)=>{
     const data = await selectWeather();
     let count = 0
     data.forEach((data)=> count ++);
-    
-
     res.status(200).json({success: true,total:count,data})
 }));
 
