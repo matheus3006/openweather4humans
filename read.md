@@ -22,10 +22,10 @@ __Tabela Criada no ElephantSQL__:
 );
 ---
 
- **Rotas da aplicação:**
-__[Front-end](http://localhost:3000): http://localhost:3000/__
+ **Rotas da aplicação:**  
+__[Front-end](http://localhost:3000): http://localhost:3000/__  
 ---
-__Back-end__:
+__Back-end__:  
     :*[Get](http://localhost:5000/api/v1/weather/city/:city)*:__http://localhost:5000/api/v1/weather/city/:city__ Retorna os dados buscados da cidade escolhida;  
     :*[Get](http://localhost:5000/api/v1/weather/most_searched)*:__http://localhost:5000/api/v1/weather/most_searched__ Retorna os dados que mais foram pesquisados e quantas vezes;   
     :*[Get](http://localhost:5000/api/v1/weather/last_searched)*:__http://localhost:5000/api/v1/weather/last_searched__ Retorna as ultimas cidades pesquisadas (**Não repete valores**);        
