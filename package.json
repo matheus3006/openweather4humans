@@ -4,6 +4,12 @@
   "main": "server.js",
   "author": "matheussouza18@live.com",
   "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "server": "NODEMON server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
@@ -15,6 +21,7 @@
     "pg": "^8.5.1"
   },
   "devDependencies": {
+    "concurrently": "^6.0.0",
     "nodemon": "^2.0.7"
   }
 }
