@@ -93,6 +93,7 @@ input[type="text"] {
   margin-bottom: 30px;
   margin-right: 20px;
   font-size: 23px;
+  text-transform: capitalize;
 }
 
 input[type="text"] {
@@ -145,6 +146,7 @@ button:active {
 .weather__value {
   color: rgb(0, 0, 0);
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .weather__error {

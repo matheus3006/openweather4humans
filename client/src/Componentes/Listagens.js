@@ -11,11 +11,11 @@ const Listagens = (props) => {
 
       <div>
         <div className="cities-container">
-        
-          <h3>Cidades mais Pesquisadas <i class="fas fa-sync-alt att" onClick={props.mostSearched}> </i></h3>
+
+          <h3>Cidades mais Pesquisadas <i className="fas fa-sync-alt att" onClick={props.mostSearched}> </i></h3>
           {props.most_search.map((data, i) => {
             return (
-              <p className="cities-result" key={i}>   
+              <p className="cities-result" key={i}>
                 {data.name} pesquisado {data.was_checked} vezes
               </p>
             );
@@ -25,13 +25,12 @@ const Listagens = (props) => {
 
       <div>
         <div className="cities-container">
-          <h3>Ultimas cidades pesquisas <i class="fas fa-sync-alt att" onClick={props.lastSearched}></i></h3>
+          <h3>Ultimas cidades pesquisas <i className="fas fa-sync-alt att" onClick={props.lastSearched}></i></h3>
           {props.last_search.map((data, i) => {
-            
             return (
-              <p className="cities-result"  key={i}>
-                
-                {i+1} - {data.last_searched_cities}
+              <p className="cities-result" key={i}>
+
+                {i + 1} - {data.last_searched_cities}
               </p>
             );
           })}

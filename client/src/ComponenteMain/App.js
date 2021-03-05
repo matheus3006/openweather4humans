@@ -69,30 +69,29 @@ class App extends React.Component {
     }
   };
 
-
-   mostSearched = async(e)=>{
-    e.preventDefault()
-      const mostSearched_resp = await axios.get(
-      `http://localhost:5000/api/v1/weather/most_searched`
-    );
-    const mostSearched = mostSearched_resp.data.data;
-    this.setState({
-      most_search: mostSearched,
-    });
-  }
-  lastSearched = async(e)=>{
-   e.preventDefault()
-    const lastSearched_resp = await axios.get(
-          `http://localhost:5000/api/v1/weather/last_results`
-        );
-        const lastSearched = lastSearched_resp.data.data;
-    
-        this.setState({
-          last_search: lastSearched,
-        });
-  }
-
-
+ 
+     mostSearched = async(e)=>{
+      
+       const mostSearched_resp = await axios.get(
+       `http://localhost:5000/api/v1/weather/most_searched`
+     );
+     const mostSearched = mostSearched_resp.data.data;
+     this.setState({
+       most_search: mostSearched,
+     });
+   }
+   lastSearched = async(e)=>{
+   
+     const lastSearched_resp = await axios.get(
+           `http://localhost:5000/api/v1/weather/last_results`
+         );
+         const lastSearched = lastSearched_resp.data.data;
+     
+         this.setState({
+           last_search: lastSearched,
+         });
+   }
+   
   render() {
     return (
       <div>
@@ -112,8 +111,7 @@ class App extends React.Component {
                     error={this.state.error}
                   />
                 </div>
-                <div className="col-6 title-container">
-                  
+                <div className="col-6 title-container">                  
                   <Listagens
                     mostSearched={this.mostSearched}
                     lastSearched={this.lastSearched}
