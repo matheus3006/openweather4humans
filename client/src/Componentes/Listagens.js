@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "../ComponenteMain/EstiloMain/tech4Humans.png";
 
 const Listagens = (props) => {
-  console.log(props)
   return (
     <div className="text-center mx-auto">
       <div className="title">

@@ -56,7 +56,7 @@ class App extends React.Component {
         });
       }
     } catch (err) {
-      console.error(err);
+      
       this.setState({
         temperature: undefined,
         city: undefined,
@@ -71,7 +71,6 @@ class App extends React.Component {
 
  
      mostSearched = async(e)=>{
-      
        const mostSearched_resp = await axios.get(
        `http://localhost:5000/api/v1/weather/most_searched`
      );
@@ -85,8 +84,7 @@ class App extends React.Component {
      const lastSearched_resp = await axios.get(
            `http://localhost:5000/api/v1/weather/last_results`
          );
-         const lastSearched = lastSearched_resp.data.data;
-     
+         const lastSearched = lastSearched_resp.data.data;  
          this.setState({
            last_search: lastSearched,
          });
