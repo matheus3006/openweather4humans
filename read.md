@@ -47,8 +47,8 @@ Basta utilizar em seu terminal:
 Foi criado o diretório `openweather4humans/`, após a clonagem.
 
 ---  
-Entre então no novo diretório:
-*Comandos no Terminal*:
+####Entre então no novo diretório:  
+#####*Comandos no Terminal*:  
  Digite: `cd openweather4humans/`
  Utilize npm ou yarn para instalar as depencias do backend: ` npm install `  
  
