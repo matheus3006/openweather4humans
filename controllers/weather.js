@@ -3,7 +3,7 @@ const asyncHandler = require('../middleware/async');
 const weather = require("openweather-apis")
 const {insertWeather,topFive,lastSearch,selectWeather} = require('../models/Weather');
 
-exports.saveWeather = asyncHandler(async(req,res,next)=>{
+exports.getWeather = asyncHandler(async(req,res,next)=>{
     weather.setLang('pt_br');
     weather.setAPPID(process.env.API_KEY);
     const city = req.params.city;

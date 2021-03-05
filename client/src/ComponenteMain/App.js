@@ -82,7 +82,7 @@ class App extends React.Component {
    lastSearched = async(e)=>{
    
      const lastSearched_resp = await axios.get(
-           `http://localhost:5000/api/v1/weather/last_results`
+           `http://localhost:5000/api/v1/weather/last_searched`
          );
          const lastSearched = lastSearched_resp.data.data;  
          this.setState({
