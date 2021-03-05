@@ -24,7 +24,7 @@ const topFive = async()=>{
 
 const lastSearch = async()=>{
     const cityWeather = await connect();
-    const res = await cityWeather.query('SELECT name AS Last_searched_cities FROM cityWeather ORDER BY id DESC LIMIT 5');
+    const res = await cityWeather.query('SELECT name AS Last_searched_cities,MAX(id) FROM cityWeather GROUP BY Last_searched_cities ORDER BY MAX(id) DESC LIMIT 5');
 
     cityWeather.release();
     return res.rows;

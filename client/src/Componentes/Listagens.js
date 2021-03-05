@@ -10,11 +10,10 @@ const Listagens = ({ mostSearched, lastSearched }) => {
 
       <div>
         <div className="cities-container">
-          <h3>Cidades mais Pesquisados</h3>
+          <h3>Cidades mais Pesquisadas</h3>
           {mostSearched.map((data, i) => {
             return (
-              <p className="cities-result" key={i}>
-                
+              <p className="cities-result" key={i}>   
                 {data.name} pesquisado {data.was_checked} vezes
               </p>
             );
@@ -24,7 +23,7 @@ const Listagens = ({ mostSearched, lastSearched }) => {
 
       <div>
         <div className="cities-container">
-          <h3>Ultimas pesquisas</h3>
+          <h3>Ultimas cidades pesquisas</h3>
           {lastSearched.map((data, i) => {
             
             return (
